@@ -1,0 +1,122 @@
+一、Html基础篇-初级标签
+Html标签
+介绍：
+Html:hyperText markup language
+超文本标记语言     （专业素养）
+由一对一对的标签组成（头标签+尾标签）
+<html></html>根标签，
+根标签包含结构化标签：
+1、<head></head> 思想 （编辑给浏览器的）看不见 
+（2）编码字符集，字典
+<html lang=”en”>告诉搜索引擎爬虫我们的网站是关于什么内容的。En关于英文内容的，zh关于中文的。英文中文lang=”en,zh”
+<meta charset=”utf-8”>  编码字符集：gb2312：中国国家标准第2312条 //缺点：包含很多亚洲字符集，只能识辨简体，不能识别繁体
+Gbk：国家标准扩展版本，包含所有的亚洲字符集（只能包含繁体）
+Unicode(常用）：万国码，所有国家的语言都包括了
+Utf-8（常用）:unicode的升级版。
+<title></title>:
+SEO搜索引擎优化技术
+<meta content=”服装” name=”keywords”>关键字
+<meta content=”这是一件你穿了就不想脱的衣服” name=”description”>描述信息
+2、<body></body>表皮，展现给别人看的（可见）
+   (1)<p>  </p>段落标签
+   (2)<h1></h1>标题标签
+      ----<h6></h6>
+（3）<strong></strong>加粗
+（4）<em></em>斜体     //标签可以嵌套
+（5）<del></del>打折常用  横线去掉原价
+      <del style=”color:#999”>60$</del>
+（6）<address>宁德师范学院新校区求知楼，1N414</address>abz
+（7）<div></div>独占一行  //为了更方便，更规格化
+     充当容器，分块明确，划分功能块，让页面更加结构化  
+（8）<span></span>不独占一行
+二、进级篇-高级标签
+1、<div style="width: 100px;height: 100px;background-color: green;">额 呵 呵 v 文 化UI的话 W Y 都 开 始就哦哦哦哦哦哦哦哦</div>
+(1)容器会变形
+2、
+Html编码符：
+&Nbsp;空格
+&lt;<  &gt; >
+回车 换行：<br>
+
+有序列表：
+列表架、列表项
+<ol type=”a”>   按罗马数字i I
+<li>marvel</li>
+<li>速8</li>
+<li>返老还童</li>
+</ol>
+//////倒着排序<ol type=”1” reversed=”reversed”>
+/////从第几个开始排<ol type=”a” start=”3”> c开始
+无序列表：
+<ul type=”desc”>  ///desc实心圆、square、circle园
+<li></li>
+<li></li>
+<li></li>
+</ul>
+常用语导航栏、菜单项
+
+网站：文字、图片
+<img src=””>图片单标签
+图片引入方式
+1、网上url(超级链接）
+2、本地的绝对路径
+3、本地的相对路径
+(1)D：/a/b/lession2.html  网页地址
+D: /a/b/123.jpg           图片地址
+以上网页地址跟图片之间成相对关系
+地址可以不用写全<img src=”123.jpg style=”width:200px”>
+
+(2)D：/a/b/lession2.html  网页地址
+D: /a/b/c/123.jpg           图片地址
+不是同一个地址，成绝对关系
+地址要写全<img src=”D: /a/b/c/123.jpg style=”width:200px;” > 
+<img src=”D: /a/b/c/123.jpg style=”width:200px;”  alt=”这是范爷”>
+Alt:图片占位符，报错时提示信息
+Titlt:图片提示符
+<a href=”https://www.baidu.com”>百度</a>hyperText reference超文本引用
+href=””：所指向的目标地址
+<a href=”https://www.baidu.com” style=”width:100px;height：100px；background-color:red;
+Display:block;target=”_blank”>百度</a>
+target=”_blank在新标签打开
+ol:order list
+Ul:unorder list
+A:anchor----锚
+<div style></div>
+<div></div>
+
+A标签的作用
+1、超链接
+2、锚点
+3、打电话  //<a href=”tel:17306931153” style=”font-style:12px”>打电话</a>
+4、发邮件  //<a href=”mailto:cheng.ji@alibaba-inc.com”>发邮件</a>
+5、协议限定符  //<a href=”javascript: while(1){alert(‘让你手欠’)}”>你点我试试？来呀！</a>
+   强制运行javascript代码
+表单标签
+<form method=”post”></form> //能发送数据，能把前端数据发送给后端工程师
+Method=“get/post”:发送数据的方式
+Action=””  ：发送给谁的地址
+<input type=”text”> 输入框
+<input tyoe=”password”> 密码框
+用合适的标签，语义化好（可维护性好）维护：在原有的基础上修改
+Submit:提交  login登录
+当网页的导航栏发生变化就是提交成功了
+在控制台获取密码：
+var div=document.getElementsByTagName(‘input’)[1];
+undefined
+div.value
+Md5加密，不可破解，正向可逆，反向不可逆
+1、你<input type=”radio” name=”star” value=”xiaobei”>
+2、我<input type=”radio”  name=”star” value=”haer”>
+3、她<input type=”radio”  name=”star” value=”nier”>
+Radio:单选 name值要一致 value:属性值
+传送数据必须要有数据的名数据的值name、value
+发送数据：submit
+checkbox:复选框
+选项菜单：
+<select>
+<option></option>
+<option></option>
+</select>
+
+编程：想法+技术
+onfocus="this.value=''"" 当为空时聚焦
