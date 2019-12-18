@@ -1,0 +1,107 @@
+淘宝网练习：
+一、项目前准备
+（掌握css与hrml的结构
+IE7浏览器不能浏览淘宝网
+淘宝网是涉及的知识内容比较全面的网页）
+（1）样式重置与模块化
+（2）Line-height不同值的区别
+（3）css@规则
+（4）Favicon
+（5）Base标签
+（6）自定义图标
+（7）H标签的应用场景
+（8）以图换字 //针对于su搜索引擎优化
+（9）怪异盒模型
+（10）Css3（圆角、渐变、过渡）
+（11）IE滤镜
+（12）CSS HACK
+（13）图片垂直居中对齐 //有哪几种方法
+（14）Css sprites //图片精灵
+（15）表格
+（16）图片格式wepb
+（17）词换行
+
+二、基本结构与样式
+   在编译器创建文件（资源管理器）
+  Index.css、 reset.css(样式重置)、images
+（1）把淘宝网划分结构---》顺序是自上而下、从左往右
+  考虑内容、颜色块、间距、边框
+（2）头部信息
+  关于id和class的选择：
+ 根据个人习惯，
+(1)对于最外层（不是通用的层）选择id（独立的层）,
+(2)通用的层用class,需要用到js，需要与他进行交互时用id.
+(3)特殊的地方，独立的层（导航）用id.
+<div id=”headmessage”></div> 头部信息
+<div id=”headAD”></div>  //广告
+<div  id=”headsearch”></div> //头部搜索
+<div  id=”firstscreen></div> //首屏内容
+有好货与爱逛街
+<div id=”layer”></div>
+右侧固定定位导航
+<div id=”tool”></div>
+样式重置，给一些没有必要以及有影响的样式重新设置
+Font:12px/1.5 tahoma,arial,’Hiragino Sans GB’,’\5b8b\4f53’,sans-sans-serif;
+Font：复合属性	
+（1）12px/1.5：字体大小/行高
+ Line-height:normal;
+Line-height:1.5;
+Line-height:200px;
+Line-height:50px;
+Line-height:5em;
+\5b8b\4f53: （万国码unicode ）宋体 (活字印刷术 毕昇）
+Font-family:”宋体”/\5b8b\4f53/SimSun
+.clearfix:after{
+  Content:’’;
+Display:block;
+Clear:both;
+}    //清楚浮动三件套
+
+模块化
+@规则 （css语法规则的一种）
+@charset  设置样式表的编码
+@import   导入其他样式文件 @import ‘reset.css’
+@media   媒体查询   （移动端开发）
+@font-face  自定义字体
+<base href=””> //
+  	
+三、头部信息结构
+图标位置放在网站根目录
+Ico在线生成图标
+注意地址栏显示情况
+Vscode 安装插件live server
+<base href=”www.baidu.com” target=”_blank”> //-->针对于<a href=“#”>度娘</a>  <a href=”#”>统一设置
+Base只能出现一个
+
+四、头部信息样式与自定义图标
+Font-face:加载本地字体文件
+  用户安装了相关的字体才可以显示
+阿里巴巴矢量图标库（unicode的使用步骤）
+Class=”iconfont arrow” //箭头
+空格由字体大小决定
+
+五、头部广告结构与样式
+Emmet插件
+盒模型
+（1）标准盒模型
+总宽度=border(左右）+width+padding(左右）
+            总高度=border(上下）+height+padding(上下)
+                    
+（2）IE怪异盒模型
+           总宽度=width
+           总高度=height
+H标签：
+     H1:新闻标题、文章首页、文字logo（一个页面中h1只能出现一次）
+      H2:副标题
+  H3:页面当中的板块标题
+H4:板块里面标题
+H5、h6:板块中又嵌套了标题
+标签的嵌套都是有规则的
+
+
+六、头部搜索结构与样式
+  
+七、导航结构与样式
+八、首屏内容结构
+九、侧边导航结构样式
+十、图片区域结构与样式
