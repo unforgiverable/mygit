@@ -1,0 +1,84 @@
+一实例，居中五环，两栏布局，两个经典bug,BFC
+二简短而重要的环节
+三css高级篇-包裹浮动元素，开发经验实例，经验
+Plat:平台
+Bfc: block format content  //可以改变盒子的语法规则  只改变一点儿
+  （每一个盒子都有一套规则
+有特定的手段让盒子的渲染规则发生改变
+）
+如何触发一个盒子的bfc
+1、Position:absolute;
+2、Display:inline-block;
+3、Float:left/right;  //浮动
+4、Overflow:hidden;  //溢出部分隐藏
+ 
+区域不能共用
+
+盒模型、层模型。浮动模型，
+
+1、浮动元素产生浮动流
+   所有产生了浮动流的元素，块级元素看不到他们
+  产生了bfc的元素和文本类属性（inline）的元素以及文本都能看到浮动元素
+只有块级元素看不到浮动元素
+
+
+一、文字溢出处理，背景图片处理，企业开发经验
+后端给的数据大于容器时，用···显示（单行文字溢出要）
+（1）单行文本
+While-space:nowrap；  //一段文字溢出是不换行
+Overflow:hidden；  //溢出隐藏
+Text-overflow:ellipsis; //溢出部分···显示
+（2）多行文本
+   多行截断处理
+	
+Backgriound-image:url(xx.jpg);: 背景用图片
+Background-size:100px 100px;  尺寸
+Background-repeat:repeat/no-repeat/repeat-x/repeat-y;  背景重复铺满、不铺满
+Background-position:100px 100px/ top center left/right- center/0 0 /50% 50% 位置
+
+一旦浏览器采取了默认加载策略，我们还要让网页好用
+（就是一旦网速低于一定值的时候，css、js自动屏蔽掉）
+图片代替文字
+<a href=”http://www.taobao.com” 
+        Target=”_blank”>淘宝网</a>
+.css
+第一种方法：
+A{
+ Text-indent:190px;//首行缩进
+White-space:nowrap; //强制性不换行
+Overflow:hidden //溢出隐藏
+第二种方法：
+A{
+Display:inline-block;
+Text-decoration:none;
+Width:190px;
+Height:0px;
+Padding-top:90px;
+Overflow:hidden;
+Border:1px solod black;
+}
+行级元素只能嵌套行级元素
+块级元素可以嵌套任何元素
+P标签不能嵌套<div>
+A标签不能嵌套a标签
+
+
+二、一个特别的辅助工具
+渡一公众号
+
+三、Css升华篇-css要点补充说明
+Padding:0 auto 
+Inline    inline-block --- 
+凡是带有inline的元素，都有文本累特点，都是文本元素
+
+Position:absolute;
+Float:left-right;   一旦设置了这两个中的一个，这些元素在内部就会被转换成Display:inline-block;
+所以就可以设置宽高了
+Vertical-align:middle/-5px
+
+<div>	
+<ul style=”float:left”></ul>向左浮动
+<ul style=”float:right”></ul>向右浮动
+</div>
+四、Css升华篇-项目演练
+ 
