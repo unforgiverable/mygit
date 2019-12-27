@@ -1,0 +1,131 @@
+1、什么是git?
+git是一款源代码管理工具（版本管理工具）
+我们代码需要使用git进行管理。因为人工区处理不同的版本，做相应的备份会很麻烦。
+git是linux之父为了维护linux写的一个版本管理工具，方便备份修改。
+2、git安装
+全部点击下一步
+安装成功的标志：右键显示{git gui here
+                        git bash here}
+ 3、流行框架--初始化git仓库
+ 使用git 新建一个文件夹（myproject）-->做项目代码开发
+  右键-》get bash here
+  git init   (init初始化）
+  在项目目录右键打开git bash here
+  （文件隐藏时： 查看--》显示隐藏）
+  （说明：这个仓库会存放git对我们项目代码进行备份修改的文件）
+                        
+命令：git init
+
+4、流行框架--配置使用者的用户名和邮件
+
+把myproject放在sublime text中
+新建文件readme,md(开发的代码）
+    |
+    敲代码备份
+    右键get bash here(看目录是否拾一致）
+   
+   （1）用户
+   git config --global user.name "xiaoming"   (config 配置 global 表示全局
+   （2）邮箱
+   git config --global user.email"xiaoming@sina.com"
+   每一次备份都会把当前备份者的信息进行存储。
+5、流行框架--吧代码存储到git仓库中
+ git add ./read.md
+ git commit -m "我们完成了第一个功能”      //-m信息说明，commit提交
+ 
+ 步骤：
+ 把大象放到冰箱需要几步？
+ （1）开门
+  （2）放
+  （3）关门
+  
+  把代码存储到git中
+  （1）把代码放在git门口
+       git add ./readme.md 
+   (2）把仓库门口的代码放到里面的房间去
+      git commit -m "这是对这次添加的
+  6、流行框架--把代码提交到仓库中
+  git add ./readme.md
+  git commit -m
+  【不写-m的话
+  出现另外的界面
+  按下i键
+  按下esc
+  输入:q 回车
+   esc
+   :q!
+   终止提交，退出来了
+   重新执行 git commit -m "这一次，我们加了一个功能】
+
+7、流行框架--命令命令查看状态
+  git add ./read.me
+  git status    (modified:readme.md)修改后的
+  git commit -m "这一次，我们完成看第三个功能“
+  git status
+  git add ./readme.md
+  git status
+  git commit -m "这是我们修改后的第四个功能    //总会修改到你喜欢的，干就完事了
+  命令：git status  查看当前代码有没有被放到仓库中去
+8、流行框架--git add和git commit补充
+  git status
+   git add ./
+   git status
+   git commit -m "添加了01.js和一个新功能“
+     修改
+     git status
+     git commit --all 表示把修改过的代码一次性放到仓库中
+     
+     命令：git add ./把所有的修改过的文件放到大门口
+         git commit --all -m  表示把所有的修改的文件提交到仓库中
+         
+9、流行框架--git查看日志
+（1）gitigonre,在这个文件中可以设置被忽略的文件或目录
+ （2）被忽略的文件不会被提交到仓库中
+ （3）在.gitignore中可以书写要备忽略的文件的路径，以/开头。一行写一个路径，这些路径对应的文件都会被忽略，不会被提交到仓库中。
+ 写法
+ /.idea 会忽略.idea文件
+ /js 会忽略js目录里的所有文件
+ /js/*.js 会忽略js目录下的所有文件
+ 
+ {clear   清除
+ git log   查看历史提交的数据
+ git commit -m  第二个功能
+ git log 
+ git log --oneline   //查看简介版本的日志
+ }
+10、流行框架，git版本回退‘
+   git reset --hard Head ~0
+   git add ./
+   git commit -m"加了一句会话”
+   git log --oneline
+   git log--oneline
+   回退到指定的版本
+            //hard 把代码那过来，Head~0往前退
+                                    ~1往上上一次退
+                                   
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
